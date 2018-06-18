@@ -1,9 +1,9 @@
 FROM ubuntu:16.04
 LABEL Maintainer="Pedro Lobo <https://github.com/pslobo>"
 LABEL Name="grok_exporter"
-LABEL Version="1.0"
+LABEL Version="0.2.5"
 
-ENV GROK_VERSION="grok_exporter-0.2.1.linux-amd64"
+ENV GROK_VERSION="grok_exporter-0.2.5.linux-amd64"
 
 RUN apt-get update -qqy \
     && apt-get upgrade -qqy \
