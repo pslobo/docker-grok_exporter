@@ -19,6 +19,9 @@ RUN apt-get update -qqy \
        wget unzip ca-certificates \
     && rm -fr /var/lib/apt/lists/*
 
+
+RUN mkdir -p /etc/grok_exporter
+RUN ln -sf /etc/grok_exporter/config.yml /grok/
 WORKDIR /grok
 
-CMD ["./grok_exporter", "-config", "/grok/config.yml"]   
+CMD ["./grok_exporter", "-config", "/grok/config.yml"]

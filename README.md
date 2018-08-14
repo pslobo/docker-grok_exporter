@@ -4,9 +4,9 @@ Export [Prometheus] metrics from arbitrary unstructured log data.
 
 ## About Grok
 
-[Grok] is a tool to parse crappy unstructured log data into something structured and queryable. 
+[Grok] is a tool to parse crappy unstructured log data into something structured and queryable.
 
-The [`grok_exporter`] aims at porting Grok from the ELK stack to [Prometheus] monitoring. The goal is to use Grok patterns for extracting Prometheus metrics from arbitrary log files. 
+The [`grok_exporter`] aims at porting Grok from the ELK stack to [Prometheus] monitoring. The goal is to use Grok patterns for extracting Prometheus metrics from arbitrary log files.
 
 ## How to use this image
 
@@ -15,14 +15,14 @@ You need to provide [`grok_exporter`] with a config file in order to function pr
 There are various ways in which you can utilize this image, each however assumes that the log file you're trying to parse is reacheable by the grok_exporter container.
 
 
-### Running Solo 
+### Running Solo
 
 This assumes Prometheus is installed locally (or on another server) and therefore, the metrics endpoint that `grok_exporter` exposes must be reachable:
 
 ```sh
 docker container run --name grok -d \
                      -p PORT:PORT \
-                     -v $(pwd)/config.yml:/grok/config.yml \
+                     -v $(pwd)/config.yml:/etc/grok_exporter/config.yml \
                      palobo/grok_exporter
 ```
 
@@ -36,7 +36,7 @@ Assuming you're using this image alonside other images (Prometheus and Grafana r
 ```sh
 docker container run --name grok -d \
                      --net PROM-NETWORK \
-                     -v $(pwd)/config.yml:/grok/config.yml \
+                     -v $(pwd)/config.yml:/etc/grok_exporter/config.yml \
                      palobo/grok_exporter
 ```
 
