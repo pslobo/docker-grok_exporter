@@ -64,13 +64,6 @@ server:
     port: 9144
 ```
 
-## Donations
-If you'd like to thank my work in dockerizing this, donations are accepted in a number of crypto currencies:
-
-- BTC: `17D3VRudF4CPZTAfCqf3XoVMKHiqq36HQF`
-- ETH: `0xA86Efc80Ae2C471Fa0bF3956E85d6748552D015E`
-- LTC: `LbUmXfLGEZZVwS3ixLeo2EoyK26BrxT7Zs`
-
 
 
 [Prometheus]: https://prometheus.io/
